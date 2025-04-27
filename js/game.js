@@ -14,7 +14,7 @@ class DiceCafeGame {
             questsCompleted: 0,
             maxQuests: 3,
             isBossFight: false,
-            currentRealm: 'realm1',
+            currentRealm: 'Кав\'ярня ранкових метрвяків',
             diceValues: [0, 0, 0, 0],
             canReroll: true,
             canAddDie: true,
@@ -81,7 +81,7 @@ class DiceCafeGame {
         this.updateStatBoxes(this.goldBoxes, this.stats.gold);
         
         // Update realm indicator
-        this.realmIndicator.textContent = `Realm ${this.gameState.currentRealm.replace('realm', '')}`;
+        this.realmIndicator.textContent = `Рівень: ${this.gameState.currentRealm.replace('realm', '')}`;
         
         // Update progress
         this.progressBar.style.width = `${(this.gameState.questsCompleted / this.gameState.maxQuests) * 100}%`;
@@ -313,7 +313,7 @@ class DiceCafeGame {
         // Check game over conditions
         if (this.stats.health <= 0) {
             setTimeout(() => {
-                this.showResultPopup('Game Over!', ['You ran out of health!']);
+                this.showResultPopup('Гра закінчена!', ['Тобі наваляли!']);
                 setTimeout(() => {
                     this.resetGame();
                 }, 3000);
@@ -379,7 +379,7 @@ class DiceCafeGame {
             questsCompleted: 0,
             maxQuests: 3,
             isBossFight: false,
-            currentRealm: 'realm1',
+            currentRealm: 'Кав\'ярня ранкових метрвяків',
             diceValues: [0, 0, 0, 0],
             canReroll: true,
             canAddDie: true,
