@@ -89,9 +89,9 @@ const REALM_CARDS = {
                         condition: "sequence",
                         effects: [
                             { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "health", value: 2, text: "+2❤️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Стріт +2🪙 +2❤️"
+                        text: "Стріт +2🪙 +1❤️"
                     }
                 }
             },
@@ -152,11 +152,9 @@ const REALM_CARDS = {
                     special: {
                         condition: "isSumEven",
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Парне число +2❤️, +2🪙, and +1☘️"
+                        text: "Парне число +1❤️"
                     }
                 }
             },
@@ -184,11 +182,9 @@ const REALM_CARDS = {
                     special: {
                         condition: "isSumEven",
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Парне число +2❤️ +2🪙 +1☘️"
+                        text: "Парне число +1❤️"
                     }
                 }
             }
