@@ -154,7 +154,7 @@ const REALM_CARDS = {
                         effects: [
                             { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Парне число +1❤️"
+                        text: "Ціле +1❤️"
                     }
                 }
             },
@@ -184,7 +184,7 @@ const REALM_CARDS = {
                         effects: [
                             { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Парне число +1❤️"
+                        text: "Ціле +1❤️"
                     }
                 }
             }
@@ -415,11 +415,9 @@ const REALM_CARDS = {
                         condition: "isSumEven",
                         value: 7,
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Парне число +2❤️ +2🪙 +1☘️"
+                        text: "Ціле +1❤️"
                     }
                 }
             },
@@ -449,11 +447,10 @@ const REALM_CARDS = {
                         condition: "isSumEven",
                         value: 7,
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" },
+                            { type: "gold", value: 1, text: "+1🪙" }
                         ],
-                        text: "Парне число +2❤️, +2🪙, and +1☘️"
+                        text: "Ціле +1❤️, +1🪙"
                     }
                 }
             }
@@ -524,7 +521,7 @@ const REALM_CARDS = {
                         effects: [
                             { type: "health", value: 2, text: "+2❤️" }
                         ],
-                        text: "Парне число +2❤️"
+                        text: "Ціле +2❤️"
                     }
                 }
             },
@@ -655,7 +652,7 @@ const REALM_CARDS = {
                             { type: "gold", value: 2, text: "+2🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
                         ],
-                        text: "Парне число +2❤️, +2🪙, and +1☘️"
+                        text: "Ціле +2❤️, +2🪙, and +1☘️"
                     }
                 }
             },
@@ -689,7 +686,7 @@ const REALM_CARDS = {
                             { type: "gold", value: 2, text: "+2🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
                         ],
-                        text: "Парне число +2❤️, +2🪙, and +1☘️"
+                        text: "Ціле +2❤️, +2🪙, and +1☘️"
                     }
                 }
             }
