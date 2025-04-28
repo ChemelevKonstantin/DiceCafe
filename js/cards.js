@@ -262,7 +262,7 @@ const REALM_CARDS = {
             {
                 id: 1,
                 title: "r2_1",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_1.png",
                 text: "Дух чаю кидає виклик: зроби чай замість кави, або тебе будуть називати в усьому Чайником!",
                 conditions: {
                     success: { 
@@ -293,7 +293,7 @@ const REALM_CARDS = {
             {
                 id: 2,
                 title: "r2_2",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_2.png",
                 text: "Він збирається воскресити твоїх конкурентів, а потім зварити Тебе за недолиту каву!",
                 conditions: {
                     success: { 
@@ -324,7 +324,7 @@ const REALM_CARDS = {
             {
                 id: 3,
                 title: "r2_3 Карткова Бійка",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_3.png",
                 text: "текст",
                 conditions: {
                     success: { 
@@ -356,7 +356,7 @@ const REALM_CARDS = {
             {
                 id: 4,
                 title: "r2_4",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_4.png",
                 text: "текст",
                 conditions: {
                     success: { 
@@ -388,7 +388,7 @@ const REALM_CARDS = {
             {
                 id: 5,
                 title: "r2_5",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_5.png",
                 text: "текст",
                 conditions: {
                     success: { 
@@ -420,7 +420,7 @@ const REALM_CARDS = {
             {
                 id: 6,
                 title: "r2_6",
-                illustration: "images/r_null.png",
+                illustration: "images/r2_6.png",
                 text: "текст",
                 conditions: {
                     success: { 
@@ -491,7 +491,7 @@ const REALM_CARDS = {
             {
                 id: 1,
                 title: "r3_1 The Chocolate Alchemist",
-                illustration: "images/r_null.png",
+                illustration: "images/r3_1.png",
                 text: "An alchemist seeks the perfect hot chocolate. Can you create magic in a cup?",
                 conditions: {
                     success: { 
@@ -523,7 +523,7 @@ const REALM_CARDS = {
             {
                 id: 2,
                 title: "r3_2",
-                illustration: "images/r_null.png",
+                illustration: "images/r3_2.png",
                 text: "текст",
                 conditions: {
                     success: { 
