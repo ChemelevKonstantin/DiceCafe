@@ -24,40 +24,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .game-container {
-    max-width: 1200px;
+    max-width: 600px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 h1 {
     color: var(--color-primary);
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.2em;
+    margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .realm-indicator {
     color: var(--color-secondary);
     font-size: 1.2em;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     text-align: center;
     font-style: italic;
 }
 
 .progress-bar {
     background: var(--color-card);
-    height: 10px;
+    height: 20px;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 5px;
+    border: 2px solid var(--color-secondary);
 }
 
 .progress {
@@ -70,12 +72,12 @@ h1 {
 .stats-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     background: var(--color-card);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    gap: 20px;
+    gap: 5px;
 }
 
 .stat-group {
@@ -118,13 +120,13 @@ h1 {
 
 .quest-and-dice-container {
     display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 5px;
+    margin-bottom: 5px;
 }
 
 .quest-card {
     background: var(--color-card);
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: var(--shadow);
     transform-style: preserve-3d;
@@ -138,7 +140,7 @@ h1 {
 
 .dice-container {
     background: var(--color-card);
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: var(--shadow);
     flex: 1;
@@ -150,10 +152,10 @@ h1 {
 .dice-area {
     /* background: #231f20; */
     border-radius: 16px;
-    padding: 24px 8px;
+    padding: 20px 8px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
 }
 
@@ -199,13 +201,13 @@ h1 {
 .quest-title {
     font-size: 1.5em;
     color: var(--color-primary);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .quest-illustration {
     text-align: center;
-    margin: 20px 0;
+    margin: 15px 0;
     animation: float 3s ease-in-out infinite;
     display: flex;
     justify-content: center;
@@ -215,27 +217,27 @@ h1 {
 
 .quest-illustration img {
     max-width: 500px;
-    max-height: 300px;
+    max-height: 200px;
     object-fit: contain;
     animation: float 8s ease-in-out infinite;
 }
 
 .quest-text {
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .quest-conditions {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 
 .condition {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px;
+    gap: 5px;
+    padding: 5px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
@@ -301,9 +303,9 @@ h1 {
 
 .controls {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
@@ -416,6 +418,73 @@ h1 {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .quest-illustration {
+        min-height: 200px;
+    }
+
+    .quest-illustration img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .quest-illustration {
+        min-height: 150px;
+        margin: 10px 0;
+    }
+
+    .quest-illustration img {
+        max-height: 150px;
+    }
+
+    .quest-title {
+        font-size: 1.2em;
+    }
+
+    .quest-text {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    .condition {
+        padding: 8px;
+    }
+
+    .condition-number {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .quest-illustration {
+        min-height: 120px;
+    }
+
+    .quest-illustration img {
+        max-height: 120px;
+    }
+
+    .quest-title {
+        font-size: 1.1em;
+    }
+
+    .quest-text {
+        font-size: 0.85em;
+    }
+
+    .condition {
+        padding: 6px;
+    }
+
+    .condition-label {
+        font-size: 0.9em;
+    }
+
+    .condition-number {
+        font-size: 1.1em;
+    }
 }
 
 .die1 { animation: float1 7.2s ease-in-out infinite; }
@@ -513,7 +582,7 @@ h1 {
 }
 
 .dice-total-container {
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
 }
