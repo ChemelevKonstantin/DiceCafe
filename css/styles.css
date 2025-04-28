@@ -617,4 +617,57 @@ h1 {
 .condition.total .condition-number.failure {
     background: rgba(244, 67, 54, 0.2);
     color: var(--color-failure);
+}
+
+.end-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.end-screen.show {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+.end-content {
+    background: var(--color-card);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: var(--shadow);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease forwards;
+}
+
+.end-content h1 {
+    color: var(--color-primary);
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.end-story {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.end-story p {
+    margin-bottom: 15px;
+}
+
+#restartEndButton {
+    font-size: 1.2em;
+    padding: 12px 30px;
 } 

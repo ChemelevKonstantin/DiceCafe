@@ -68,6 +68,10 @@ class DiceCafeGame {
         this.resultPopup = document.getElementById('resultPopup');
         this.popupTitle = document.getElementById('popupTitle');
         this.popupEffects = document.getElementById('popupEffects');
+
+        // End screen
+        this.endScreen = document.getElementById('endScreen');
+        this.restartEndButton = document.getElementById('restartEndButton');
     }
     
     attachEventListeners() {
@@ -76,6 +80,7 @@ class DiceCafeGame {
         this.addDieButton.addEventListener('click', () => this.addFourthDie());
         this.confirmButton.addEventListener('click', () => this.confirmRoll());
         this.restartButton.addEventListener('click', () => this.resetGame());
+        this.restartEndButton.addEventListener('click', () => this.resetGame());
     }
     
     updateUI() {
@@ -305,7 +310,7 @@ class DiceCafeGame {
             this.resultPopup.classList.remove('show');
             // Re-enable confirm button after popup is closed
             this.confirmButton.disabled = false;
-        }, 3000);
+        }, 2000);
     }
     
     confirmRoll() {
@@ -391,7 +396,7 @@ class DiceCafeGame {
                 }, 4000);
             } else {
                 setTimeout(() => {
-                    this.showResultPopup('Перемога!', [
+                    this.showResultPopup('Це перемога!', [
                         `╭∩╮( •̀_•́ )╭∩╮ ${currentQuest.title}!`,
                         'Іди посьорбай кави'
                     ]);
@@ -417,12 +422,25 @@ class DiceCafeGame {
     getNextRealm(currentRealm) {
         const realms = Object.keys(REALM_CARDS);
         const currentIndex = realms.indexOf(currentRealm);
-        return realms[currentIndex + 1] || null;
+        const nextRealm = realms[currentIndex + 1];
+        
+        if (!nextRealm) {
+            // This was the last realm, show end screen
+            setTimeout(() => {
+                this.showEndScreen();
+            }, 2000);
+            return null;
+        }
+        
+        return nextRealm;
     }
     
     resetGame() {
+        // Hide end screen if it's showing
+        this.endScreen.classList.remove('show');
+        
         this.stats = {
-            health: 2,
+            health: 5,
             luck: 2,
             gold: 1,
             maxValue: 5
@@ -441,11 +459,15 @@ class DiceCafeGame {
             isRolling: false,
             hasRolled: false,
             canConfirm: true,
-            usedQuestIds: new Set() // Track used quest IDs
+            usedQuestIds: new Set()
         };
         
         this.drawNewQuest();
         this.resetTurn();
+    }
+
+    showEndScreen() {
+        this.endScreen.classList.add('show');
     }
 }
 
