@@ -99,6 +99,18 @@ class DiceCafeGame {
         const activeDice = this.gameState.fourthDieEnabled ? 4 : 3;
         const total = this.gameState.diceValues.slice(0, activeDice).reduce((sum, val) => sum + val, 0);
         this.diceTotal.textContent = total;
+
+        // Update dice total color based on conditions
+        const totalElement = this.diceTotal;
+        totalElement.classList.remove('success', 'failure');
+        
+        if (this.gameState.currentQuest && total > 0) {
+            if (total >= this.gameState.currentQuest.conditions.success.threshold) {
+                totalElement.classList.add('success');
+            } else if (total <= this.gameState.currentQuest.conditions.failure.threshold) {
+                totalElement.classList.add('failure');
+            }
+        }
         
         // Update dice faces
         for (let i = 0; i < 4; i++) {

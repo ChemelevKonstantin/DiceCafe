@@ -132,6 +132,10 @@ h1 {
     flex: 2;
 }
 
+.quest-card:hover {
+    transform: none;
+}
+
 .dice-container {
     background: var(--color-card);
     padding: 20px;
@@ -192,10 +196,6 @@ h1 {
     animation: roll 0.6s ease;
 }
 
-.quest-card:hover {
-    transform: translateY(-5px);
-}
-
 .quest-title {
     font-size: 1.5em;
     color: var(--color-primary);
@@ -238,6 +238,13 @@ h1 {
     padding: 12px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.condition:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .condition-number {
@@ -263,6 +270,19 @@ h1 {
 .condition.special { 
     color: var(--color-special);
     border: 2px solid var(--color-special);
+}
+
+.condition.total {
+    color: var(--color-primary);
+    border: 0px solid var(--color-primary);
+    min-width: 120px;
+    justify-content: center;
+    cursor: default;
+}
+
+.condition.total:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .condition-label {
@@ -401,7 +421,13 @@ h1 {
 .die1 { animation: float1 7.2s ease-in-out infinite; }
 .die2 { animation: float2 7.5s ease-in-out infinite; }
 .die3 { animation: float3 7.1s ease-in-out infinite; }
-.die4 { animation: float4 7.7s ease-in-out infinite; }
+.die4 { 
+    animation: float4 7.7s ease-in-out infinite;
+}
+
+.die4:not(.disabled) {
+    animation: float4Scale 7.7s ease-in-out infinite;
+}
 
 @keyframes float1 {
     0%   { transform: translateY(0) translateX(0) rotate(-2deg);}
@@ -433,6 +459,14 @@ h1 {
     50%  { transform: translateY(-12px) translateX(0) rotate(-3deg);}
     75%  { transform: translateY(-6px) translateX(8px) rotate(-2deg);}
     100% { transform: translateY(0) translateX(0) rotate(-1deg);}
+}
+
+@keyframes float4Scale {
+    0%   { transform: translateY(0) translateX(0) rotate(-1deg) scale(1); }
+    25%  { transform: translateY(-6px) translateX(-8px) rotate(-2deg) scale(1.1); }
+    50%  { transform: translateY(-12px) translateX(0) rotate(-3deg) scale(1); }
+    75%  { transform: translateY(-6px) translateX(8px) rotate(-2deg) scale(1.1); }
+    100% { transform: translateY(0) translateX(0) rotate(-1deg) scale(1); }
 }
 
 @media (max-width: 600px) {
@@ -476,4 +510,25 @@ h1 {
         font-size: 0.8em;
         min-width: 50px;
     }
+}
+
+.dice-total-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.condition.total .condition-number {
+    background: rgba(212, 167, 98, 0.2);
+    transition: all 0.3s ease;
+}
+
+.condition.total .condition-number.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--color-success);
+}
+
+.condition.total .condition-number.failure {
+    background: rgba(244, 67, 54, 0.2);
+    color: var(--color-failure);
 } 

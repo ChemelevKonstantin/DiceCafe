@@ -192,7 +192,7 @@ const REALM_CARDS = {
         bosses: [
             {
                 id: "boss1",
-                title: "Біцепс Бро",
+                title: "💀Біцепс Бро💀",
                 illustration: "images/r1_boss1.png",
                 text: "Скрутить тебе в блендер за секунду",
                 conditions: {
@@ -226,7 +226,7 @@ const REALM_CARDS = {
             },
             {
                 id: "boss2",
-                title: "Великий Бро",
+                title: "💀Великий Бро💀",
                 illustration: "images/r1_boss2.png",
                 text: "Програєш — і станеш стильним килимком біля порогу",
                 conditions: {
@@ -263,7 +263,7 @@ const REALM_CARDS = {
                 id: 1,
                 title: "r2_1",
                 illustration: "images/r_null.png",
-                text: "Дух чаю кидає виклик: зроби ідеальний чай, або ж станеш його особистим чайником до кінця віків!",
+                text: "Дух чаю кидає виклик: зроби чай замість кави, або тебе будуть називати в усьому Чайником!",
                 conditions: {
                     success: { 
                         threshold: 13, 
@@ -325,7 +325,7 @@ const REALM_CARDS = {
                 id: 3,
                 title: "r2_3 Карткова Бійка",
                 illustration: "images/r_null.png",
-                text: "Бій за токени починається!",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 13, 
@@ -357,7 +357,7 @@ const REALM_CARDS = {
                 id: 4,
                 title: "r2_4",
                 illustration: "images/r_null.png",
-                text: "A translucent figure appears, requesting their 'usual'. What was their usual again?",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 12, 
@@ -389,7 +389,7 @@ const REALM_CARDS = {
                 id: 5,
                 title: "r2_5",
                 illustration: "images/r_null.png",
-                text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 15, 
@@ -421,7 +421,7 @@ const REALM_CARDS = {
                 id: 6,
                 title: "r2_6",
                 illustration: "images/r_null.png",
-                text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 16, 
@@ -454,7 +454,7 @@ const REALM_CARDS = {
         bosses: [
             {
                 id: "r2_boss",
-                title: "Сонний Ктулху",
+                title: "💀Сонний Ктулху💀",
                 illustration: "images/r2_boss1.png",
                 text: "Переможи Ктулху у кавовій битві — і збережеш розум; програєш — і приєднаєшся до його культу назавжди.",
                 conditions: {
@@ -684,7 +684,7 @@ const REALM_CARDS = {
         bosses: [
             {
                 id: "r3_boss",
-                title: "The Chocolate Titan",
+                title: "💀The Chocolate Titan💀",
                 illustration: "images/r_null.png",
                 text: "A colossal being made of molten chocolate challenges you to create the ultimate dessert drink!",
                 conditions: {
