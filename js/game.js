@@ -300,15 +300,12 @@ class DiceCafeGame {
         // Disable confirm button while popup is showing
         this.confirmButton.disabled = true;
         
-        // Add click handler to close popup
-        const closePopup = () => {
+        // Automatically close popup after 2 seconds
+        setTimeout(() => {
             this.resultPopup.classList.remove('show');
-            this.resultPopup.removeEventListener('click', closePopup);
             // Re-enable confirm button after popup is closed
             this.confirmButton.disabled = false;
-        };
-        
-        this.resultPopup.addEventListener('click', closePopup);
+        }, 3000);
     }
     
     confirmRoll() {
@@ -365,8 +362,8 @@ class DiceCafeGame {
                 this.showResultPopup('Гру провалено!', ['Ти ще Чайник у цьому!']);
                 setTimeout(() => {
                     this.resetGame();
-                }, 4000);
-            }, 4000);
+                }, 5000);
+            }, 5000);
             return;
         }
         
@@ -389,9 +386,9 @@ class DiceCafeGame {
                         // Re-enable confirmation after all animations are done
                         setTimeout(() => {
                             this.gameState.canConfirm = true;
-                        }, 2000);
-                    }, 2000);
-                }, 2000);
+                        }, 4000);
+                    }, 4000);
+                }, 4000);
             } else {
                 setTimeout(() => {
                     this.showResultPopup('Перемога!', [
