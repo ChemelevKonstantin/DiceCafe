@@ -19,7 +19,7 @@
 
         <div class="stats-container">
             <div class="stat-group">
-                <div class="stat-label">Health</div>
+                <div class="stat-label">Здоров'я</div>
                 <div class="stat-boxes" id="healthBoxes">
                     <div class="stat-box filled">❤️</div>
                     <div class="stat-box filled">❤️</div>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="stat-group">
-                <div class="stat-label">Luck</div>
+                <div class="stat-label">Удача</div>
                 <div class="stat-boxes" id="luckBoxes">
                     <div class="stat-box filled">☘️</div>
                     <div class="stat-box filled">☘️</div>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="stat-group">
-                <div class="stat-label">Gold</div>
+                <div class="stat-label">Грошенята</div>
                 <div class="stat-boxes" id="goldBoxes">
                     <div class="stat-box filled">🪙</div>
                     <div class="stat-box">🪙</div>
@@ -57,17 +57,17 @@
                 <div class="quest-text" id="questText">Quest description goes here...</div>
                 <div class="quest-conditions">
                     <div class="condition success">
-                        <span class="condition-label">Win:</span>
+                        <span class="condition-label">😎</span>
                         <span class="condition-number" id="successNumber">13</span>
                         <span class="condition-text" id="successCondition">+1❤️</span>
                     </div>
                     <div class="condition failure">
-                        <span class="condition-label">Fail:</span>
+                        <span class="condition-label">😡</span>
                         <span class="condition-number" id="failureNumber">9</span>
                         <span class="condition-text" id="failureCondition">-1☘️</span>
                     </div>
                     <div class="condition special">
-                        <span class="condition-label">⭐:</span>
+                        <span class="condition-label">⭐</span>
                         <span class="condition-text" id="specialCondition">Pair +1🪙</span>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="dice-total-container">
                     <div class="condition total">
-                        <span class="condition-label">Total:</span>
+                        <span class="condition-label">Всього:</span>
                         <span class="condition-number" id="diceTotal">0</span>
                     </div>
                 </div>
@@ -90,17 +90,17 @@
         </div>
 
         <div class="controls">
-            <button id="rollButton" class="btn primary">Roll Dice</button>
-            <button id="rerollButton" class="btn secondary">Reroll (1☘️)</button>
-            <button id="addDieButton" class="btn secondary">Add Die (1🪙)</button>
-            <button id="confirmButton" class="btn confirm">Confirm</button>
+            <button id="rollButton" class="btn primary">Кинути кубіки</button>
+            <button id="rerollButton" class="btn secondary">Перекинути (1☘️)</button>
+            <button id="addDieButton" class="btn secondary">Додати кубік (1🪙)</button>
+            <button id="confirmButton" class="btn confirm">Підтвердити</button>
             <button id="restartButton" class="btn secondary" title="Restart">🔄</button>
         </div>
     </div>
 
     <div class="result-popup" id="resultPopup">
         <div class="popup-content">
-            <h2 id="popupTitle">Success!</h2>
+            <h2 id="popupTitle">Успіх!</h2>
             <div id="popupEffects"></div>
         </div>
     </div>
