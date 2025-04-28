@@ -12,7 +12,7 @@ class DiceCafeGame {
         this.gameState = {
             currentQuest: null,
             questsCompleted: 0,
-            maxQuests: 3,
+            maxQuests: 4,
             isBossFight: false,
             currentRealm: 'Кав\'ярня ранкових метрвяків',
             diceValues: [0, 0, 0, 0],
@@ -362,7 +362,7 @@ class DiceCafeGame {
         // Check game over conditions
         if (this.stats.health <= 0) {
             setTimeout(() => {
-                this.showResultPopup('Гра закінчена!', ['Тобі наваляли!']);
+                this.showResultPopup('Гру провалено!', ['Ти ще Чайник у цьому!']);
                 setTimeout(() => {
                     this.resetGame();
                 }, 4000);
@@ -395,8 +395,8 @@ class DiceCafeGame {
             } else {
                 setTimeout(() => {
                     this.showResultPopup('Перемога!', [
-                        `Ти переміг ${currentQuest.title}!`,
-                        'Ти пройшов всі Світи!'
+                        `╭∩╮( •̀_•́ )╭∩╮ ${currentQuest.title}!`,
+                        'Іди посьорбай кави'
                     ]);
                     setTimeout(() => {
                         this.resetGame();
@@ -434,7 +434,7 @@ class DiceCafeGame {
         this.gameState = {
             currentQuest: null,
             questsCompleted: 0,
-            maxQuests: 3,
+            maxQuests: 4,
             isBossFight: false,
             currentRealm: 'Кав\'ярня ранкових метрвяків',
             diceValues: [0, 0, 0, 0],
