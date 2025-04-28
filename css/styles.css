@@ -277,14 +277,24 @@ h1 {
 .condition.total {
     color: var(--color-primary);
     border: 0px solid var(--color-primary);
-    min-width: 70px;
+    min-width: 80px;
     justify-content: center;
     cursor: default;
+    padding: 5px;
+    background: rgba(212, 167, 98, 0.1);
+    border-radius: 5px;
 }
 
 .condition.total:hover {
     transform: none;
     box-shadow: none;
+}
+
+.condition.total .condition-number {
+    background: rgba(212, 167, 98, 0.2);
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    padding: 2px 8px;
 }
 
 .condition-label {
@@ -582,9 +592,9 @@ h1 {
 }
 
 .dice-total-container {
-    margin-top: 5px;
+    margin: 0 5px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .condition.total .condition-number {
