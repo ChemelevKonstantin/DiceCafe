@@ -58,6 +58,7 @@ class DiceCafeGame {
         this.rerollButton = document.getElementById('rerollButton');
         this.addDieButton = document.getElementById('addDieButton');
         this.confirmButton = document.getElementById('confirmButton');
+        this.restartButton = document.getElementById('restartButton');
         
         // Progress
         this.progressBar = document.getElementById('questProgress');
@@ -73,6 +74,7 @@ class DiceCafeGame {
         this.rerollButton.addEventListener('click', () => this.rerollDice());
         this.addDieButton.addEventListener('click', () => this.addFourthDie());
         this.confirmButton.addEventListener('click', () => this.confirmRoll());
+        this.restartButton.addEventListener('click', () => this.resetGame());
     }
     
     updateUI() {

@@ -75,25 +75,32 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    gap: 20px;
 }
 
 .stat-group {
     text-align: center;
+    flex: 1;
+    min-width: 0;
 }
 
 .stat-label {
     margin-bottom: 10px;
     color: var(--color-primary);
+    font-size: 0.9em;
+    white-space: nowrap;
 }
 
 .stat-boxes {
     display: flex;
-    gap: 5px;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .stat-box {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border: 2px solid var(--color-secondary);
     border-radius: 5px;
     display: flex;
@@ -101,6 +108,7 @@ h1 {
     align-items: center;
     opacity: 0.3;
     transition: all 0.3s ease;
+    font-size: 0.9em;
 }
 
 .stat-box.filled {
@@ -273,44 +281,55 @@ h1 {
 
 .controls {
     display: flex;
+    gap: 10px;
     justify-content: center;
-    gap: 15px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: inherit;
+    min-width: 100px;
 }
 
 .btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn.primary {
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     color: var(--color-bg);
 }
 
 .btn.secondary {
-    background: var(--color-secondary);
+    background-color: var(--color-secondary);
     color: var(--color-text);
 }
 
 .btn.confirm {
-    background: var(--color-success);
+    background-color: var(--color-success);
     color: var(--color-text);
+    margin-right: 20px;
+}
+
+#restartButton {
+    padding: 10px;
+    min-width: 40px;
+    font-size: 1.2em;
 }
 
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+    box-shadow: none;
 }
 
 .result-popup {
@@ -414,4 +433,47 @@ h1 {
     50%  { transform: translateY(-12px) translateX(0) rotate(-3deg);}
     75%  { transform: translateY(-6px) translateX(8px) rotate(-2deg);}
     100% { transform: translateY(0) translateX(0) rotate(-1deg);}
+}
+
+@media (max-width: 600px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .stat-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .stat-label {
+        margin-bottom: 0;
+        min-width: 60px;
+        text-align: left;
+    }
+
+    .stat-boxes {
+        justify-content: flex-end;
+    }
+
+    .stat-box {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stat-box {
+        width: 20px;
+        height: 20px;
+        font-size: 0.8em;
+    }
+
+    .stat-label {
+        font-size: 0.8em;
+        min-width: 50px;
+    }
 } 
