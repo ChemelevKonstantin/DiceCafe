@@ -216,11 +216,11 @@ const REALM_CARDS = {
                     special: {
                         condition: "triple",
                         effects: [
-                            { type: "health", value: 3, text: "+3❤️" },
-                            { type: "gold", value: 3, text: "+3🪙" },
-                            { type: "luck", value: 3, text: "+3☘️" }
+                            { type: "health", value: 2, text: "+2❤️" },
+                            { type: "gold", value: 1, text: "+1🪙" },
+                            { type: "luck", value: 2, text: "+2☘️" }
                         ],
-                        text: "Трійка +3❤️, +3🪙, and +3☘️"
+                        text: "Трійка +2❤️ +1🪙 +2☘️"
                     }
                 }
             },
@@ -249,11 +249,9 @@ const REALM_CARDS = {
                     special: {
                         condition: "sequence",
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 2, text: "+2☘️" }
+                            { type: "health", value: 2, text: "+2❤️" }
                         ],
-                        text: "Стріт +2❤️, +2🪙, and +2☘️"
+                        text: "Стріт +2❤️"
                     }
                 }
             }
@@ -317,11 +315,9 @@ const REALM_CARDS = {
                     special: {
                         condition: "allEven",
                         effects: [
-                            { type: "luck", value: 1, text: "+1☘️" },
-                            { type: "health", value: 1, text: "+1❤️" },
-                            { type: "gold", value: 1, text: "+1🪙" }
+                            { type: "luck", value: 1, text: "+1☘️" }
                         ],
-                        text: "All even numbers +1☘️, +1❤️, and +1🪙"
+                        text: "All even numbers +1☘️"
                     }
                 }
             },
@@ -481,11 +477,10 @@ const REALM_CARDS = {
                     special: {
                         condition: "sequence",
                         effects: [
-                            { type: "health", value: 3, text: "+3❤️" },
-                            { type: "gold", value: 3, text: "+3🪙" },
-                            { type: "luck", value: 3, text: "+3☘️" }
+                            { type: "health", value: 1, text: "+1❤️" },
+                            { type: "gold", value: 1, text: "+1🪙" }
                         ],
-                        text: "Get a sequence +3❤️, +3🪙, and +3☘️"
+                        text: "Get a sequence +1❤️, +1🪙"
                     }
                 }
             }
@@ -551,10 +546,9 @@ const REALM_CARDS = {
                         condition: "allEven",
                         effects: [
                             { type: "luck", value: 1, text: "+1☘️" },
-                            { type: "health", value: 1, text: "+1❤️" },
-                            { type: "gold", value: 1, text: "+1🪙" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "All even numbers +1☘️, +1❤️, and +1🪙"
+                        text: "All even numbers +1☘️, +1❤️"
                     }
                 }
             },
@@ -648,11 +642,9 @@ const REALM_CARDS = {
                         condition: "isSumEven",
                         value: 7,
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Ціле +2❤️, +2🪙, and +1☘️"
+                        text: "Ціле +1❤️"
                     }
                 }
             },
@@ -682,11 +674,9 @@ const REALM_CARDS = {
                         condition: "isSumEven",
                         value: 7,
                         effects: [
-                            { type: "health", value: 2, text: "+2❤️" },
-                            { type: "gold", value: 2, text: "+2🪙" },
-                            { type: "luck", value: 1, text: "+1☘️" }
+                            { type: "health", value: 1, text: "+1❤️" }
                         ],
-                        text: "Ціле +2❤️, +2🪙, and +1☘️"
+                        text: "Ціле +1❤️"
                     }
                 }
             }
