@@ -21,7 +21,8 @@ class DiceCafeGame {
             fourthDieEnabled: false,
             isRolling: false,
             hasRolled: false,
-            canConfirm: true
+            canConfirm: true,
+            usedQuestIds: new Set() // Track used quest IDs
         };
         
         this.initializeElements();
@@ -233,10 +234,27 @@ class DiceCafeGame {
             const currentRealmBosses = REALM_CARDS[this.gameState.currentRealm].bosses;
             this.gameState.currentQuest = currentRealmBosses[Math.floor(Math.random() * currentRealmBosses.length)];
         } else {
-            const availableQuests = REALM_CARDS[this.gameState.currentRealm].quests.filter(card => 
-                !this.gameState.currentQuest || card.id !== this.gameState.currentQuest.id
+            const currentRealmQuests = REALM_CARDS[this.gameState.currentRealm].quests;
+            
+            // If all quests have been used, reset the used quests set
+            if (this.gameState.usedQuestIds.size >= currentRealmQuests.length) {
+                this.gameState.usedQuestIds.clear();
+            }
+            
+            // Filter out used quests and get available ones
+            const availableQuests = currentRealmQuests.filter(quest => 
+                !this.gameState.usedQuestIds.has(quest.id)
             );
-            this.gameState.currentQuest = availableQuests[Math.floor(Math.random() * availableQuests.length)];
+            
+            // If no quests are available (shouldn't happen due to reset above), use all quests
+            const questsToChooseFrom = availableQuests.length > 0 ? availableQuests : currentRealmQuests;
+            
+            // Select a random quest from available ones
+            const selectedQuest = questsToChooseFrom[Math.floor(Math.random() * questsToChooseFrom.length)];
+            
+            // Mark the selected quest as used
+            this.gameState.usedQuestIds.add(selectedQuest.id);
+            this.gameState.currentQuest = selectedQuest;
         }
         
         // Update quest card UI
@@ -413,7 +431,8 @@ class DiceCafeGame {
             fourthDieEnabled: false,
             isRolling: false,
             hasRolled: false,
-            canConfirm: true
+            canConfirm: true,
+            usedQuestIds: new Set() // Track used quest IDs
         };
         
         this.drawNewQuest();
