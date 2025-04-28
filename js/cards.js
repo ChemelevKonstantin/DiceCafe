@@ -39,7 +39,7 @@ const REALM_CARDS = {
                 text: "Поки почувай себе сильним, але якщо зустрінеш його старшого Бро, то тебе будуть відшкребати як підстільну жуйку.",
                 conditions: {
                     success: { 
-                        threshold: 10, 
+                        threshold: 9, 
                         effects: [
                             { type: "gold", value: 2, text: "+2🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
@@ -70,12 +70,12 @@ const REALM_CARDS = {
                 text: "Ти тільки подивись на ці половинки (‿∣‿)🤤... хочеш дізнатись їх секретні рецепти😉?",
                 conditions: {
                     success: { 
-                        threshold: 13, 
+                        threshold: 10, 
                         effects: [
-                            { type: "luck", value: 2, text: "+2☘️" },
-                            { type: "gold", value: 2, text: "+2🪙" }
+                            { type: "luck", value: 1, text: "+1☘️" },
+                            { type: "gold", value: 1, text: "+1🪙" }
                         ],
-                        text: "+2☘️ +2🪙"
+                        text: "+1☘️ +1🪙"
                     },
                     failure: { 
                         threshold: 7, 
@@ -97,12 +97,12 @@ const REALM_CARDS = {
             },
             {
                 id: 4,
-                title: "Привид Кавомана",
+                title: "Привіди Кавоманів",
                 illustration: "images/r1_4.png",
-                text: "Вони тебе налякають і з’їдять твій макарон. Наваляй їм по саме потойбіччя.",
+                text: "Вони тебе налякають і з'їдять твій макарон. Наваляй їм по саме потойбіччя.",
                 conditions: {
                     success: { 
-                        threshold: 12, 
+                        threshold: 11, 
                         effects: [
                             { type: "gold", value: 1, text: "+1🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
@@ -162,7 +162,7 @@ const REALM_CARDS = {
                 id: 6,
                 title: "Відьма з потойбіччя чи Напівдохлий Кіт Шрьодінгера",
                 illustration: "images/r1_6.png",
-                text: "Відьма принесла в кафе дохлого кота і намагається його оживити. Зробиш коту штучне дихання, то відьма подарує тобі💋, і у кота ❤️ забагато. Аби тільки не викликати більше Зло👿",
+                text: "Відьма принесла в кафе дохлого кота і намагається його оживити. Зробиш коту штучне дихання, то відьма подарує тобі💋, та й кіт поділиться одним з дев\'яти ❤️... Аби тільки не викликати більше Зло👿",
                 conditions: {
                     success: { 
                         threshold: 13, 
@@ -192,9 +192,9 @@ const REALM_CARDS = {
         bosses: [
             {
                 id: "boss1",
-                title: "Сонний Ктулху",
+                title: "Біцепс Бро",
                 illustration: "images/r1_boss1.png",
-                text: "Переможи темного володаря у кавовій битві — і збережеш розум; програєш — і приєднаєшся до його культу назавжди.",
+                text: "Скрутить тебе в блендер за секунду",
                 conditions: {
                     success: { 
                         threshold: 16, 
@@ -226,7 +226,7 @@ const REALM_CARDS = {
             },
             {
                 id: "boss2",
-                title: "Кусючий Бро",
+                title: "Великий Бро",
                 illustration: "images/r1_boss2.png",
                 text: "Програєш — і станеш стильним килимком біля порогу",
                 conditions: {
@@ -263,12 +263,12 @@ const REALM_CARDS = {
         quests: [
             {
                 id: 1,
-                title: "Чайний Дух",
-                illustration: "images/r2_1.png",
+                title: "r2_1",
+                illustration: "images/r_null.png",
                 text: "Дух чаю кидає виклик: зроби ідеальний чай, або ж станеш його особистим чайником до кінця віків!",
                 conditions: {
                     success: { 
-                        threshold: 15, 
+                        threshold: 13, 
                         effects: [
                             { type: "luck", value: 1, text: "+1☘️" },
                             { type: "gold", value: 1, text: "+1🪙" }
@@ -276,7 +276,7 @@ const REALM_CARDS = {
                         text: "+1☘️ +1🪙"
                     },
                     failure: { 
-                        threshold: 14, 
+                        threshold: 10, 
                         effects: [
                             { type: "health", value: -1, text: "-1❤️" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -294,8 +294,8 @@ const REALM_CARDS = {
             },
             {
                 id: 2,
-                title: "Повернення темного лорда",
-                illustration: "images/r2_2.png",
+                title: "r2_2",
+                illustration: "images/r_null.png",
                 text: "Він збирається воскресити твоїх конкурентів, а потім зварити Тебе за недолиту каву!",
                 conditions: {
                     success: { 
@@ -307,7 +307,7 @@ const REALM_CARDS = {
                         text: "+2🪙 +1☘️"
                     },
                     failure: { 
-                        threshold: 13, 
+                        threshold: 11, 
                         effects: [
                             { type: "health", value: -1, text: "-1❤️" },
                             { type: "gold", value: -1, text: "-1🪙" }
@@ -327,12 +327,12 @@ const REALM_CARDS = {
             },
             {
                 id: 3,
-                title: "Карткова Бійка",
-                illustration: "images/r2_3.png",
+                title: "r2_3 Карткова Бійка",
+                illustration: "images/r_null.png",
                 text: "Бій за токени починається!",
                 conditions: {
                     success: { 
-                        threshold: 15, 
+                        threshold: 13, 
                         effects: [
                             { type: "luck", value: 2, text: "+2☘️" },
                             { type: "health", value: 1, text: "+1❤️" }
@@ -340,7 +340,7 @@ const REALM_CARDS = {
                         text: "+2☘️ +1❤️"
                     },
                     failure: { 
-                        threshold: 14, 
+                        threshold: 12, 
                         effects: [
                             { type: "health", value: -2, text: "-2❤️" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -359,12 +359,12 @@ const REALM_CARDS = {
             },
             {
                 id: 4,
-                title: "4 The Coffee Ghost",
-                illustration: "images/r2_4.png",
+                title: "r2_4",
+                illustration: "images/r_null.png",
                 text: "A translucent figure appears, requesting their 'usual'. What was their usual again?",
                 conditions: {
                     success: { 
-                        threshold: 16, 
+                        threshold: 12, 
                         effects: [
                             { type: "gold", value: 1, text: "+1🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
@@ -372,7 +372,7 @@ const REALM_CARDS = {
                         text: "+1🪙 +1☘️"
                     },
                     failure: { 
-                        threshold: 16, 
+                        threshold: 11, 
                         effects: [
                             { type: "luck", value: -1, text: "-1☘️" },
                             { type: "health", value: -1, text: "-1❤️" }
@@ -391,12 +391,12 @@ const REALM_CARDS = {
             },
             {
                 id: 5,
-                title: "5 The Time Traveler",
-                illustration: "images/r2_5.png",
+                title: "r2_5",
+                illustration: "images/r_null.png",
                 text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
                 conditions: {
                     success: { 
-                        threshold: 16, 
+                        threshold: 15, 
                         effects: [
                             { type: "luck", value: 1, text: "+1☘️" },
                             { type: "gold", value: 1, text: "+1🪙" }
@@ -404,7 +404,7 @@ const REALM_CARDS = {
                         text: "+1☘️ +1🪙"
                     },
                     failure: { 
-                        threshold: 15, 
+                        threshold: 12, 
                         effects: [
                             { type: "gold", value: -1, text: "-1🪙" },
                             { type: "health", value: -1, text: "-1❤️" }
@@ -423,8 +423,8 @@ const REALM_CARDS = {
             },
             {
                 id: 6,
-                title: "6 The Time Traveler",
-                illustration: "images/r2_6.png",
+                title: "r2_6",
+                illustration: "images/r_null.png",
                 text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
                 conditions: {
                     success: { 
@@ -436,7 +436,7 @@ const REALM_CARDS = {
                         text: "+1☘️ +1❤️"
                     },
                     failure: { 
-                        threshold: 14, 
+                        threshold: 13, 
                         effects: [
                             { type: "gold", value: -1, text: "-1🪙" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -457,13 +457,13 @@ const REALM_CARDS = {
         ],
         bosses: [
             {
-                id: "boss2",
+                id: "r2_boss",
                 title: "Сонний Ктулху",
                 illustration: "images/r2_boss1.png",
                 text: "Переможи Ктулху у кавовій битві — і збережеш розум; програєш — і приєднаєшся до його культу назавжди.",
                 conditions: {
                     success: { 
-                        threshold: 22, 
+                        threshold: 18, 
                         effects: [
                             { type: "gold", value: 3, text: "+3🪙" },
                             { type: "health", value: 2, text: "+2❤️" }
@@ -471,7 +471,7 @@ const REALM_CARDS = {
                         text: "+3🪙 +2❤️"
                     },
                     failure: { 
-                        threshold: 6, 
+                        threshold: 16, 
                         effects: [
                             { type: "health", value: -3, text: "-3❤️" },
                             { type: "gold", value: -2, text: "-2🪙" }
@@ -495,8 +495,8 @@ const REALM_CARDS = {
         quests: [
             {
                 id: 1,
-                title: "1 The Chocolate Alchemist",
-                illustration: "images/chocolate-alchemist.png",
+                title: "r3_1 The Chocolate Alchemist",
+                illustration: "images/r_null.png",
                 text: "An alchemist seeks the perfect hot chocolate. Can you create magic in a cup?",
                 conditions: {
                     success: { 
@@ -508,7 +508,7 @@ const REALM_CARDS = {
                         text: "+2🪙 +1☘️"
                     },
                     failure: { 
-                        threshold: 5, 
+                        threshold: 13, 
                         effects: [
                             { type: "luck", value: -2, text: "-2☘️" },
                             { type: "health", value: -1, text: "-1❤️" }
@@ -527,9 +527,9 @@ const REALM_CARDS = {
             },
             {
                 id: 2,
-                title: "2 The Midnight Rush",
-                illustration: "images/midnight-rush.png",
-                text: "A group of night owls storms in just before closing. Can you handle the pressure?",
+                title: "r3_2",
+                illustration: "images/r_null.png",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 14, 
@@ -540,7 +540,7 @@ const REALM_CARDS = {
                         text: "+2🪙 +1❤️"
                     },
                     failure: { 
-                        threshold: 8, 
+                        threshold: 12, 
                         effects: [
                             { type: "health", value: -1, text: "-1❤️" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -560,9 +560,9 @@ const REALM_CARDS = {
             },
             {
                 id: 3,
-                title: "3 The Magic Bean",
-                illustration: "images/magic-bean.png",
-                text: "You found a mysterious glowing coffee bean. Do you dare to brew it?",
+                title: "r3_3",
+                illustration: "images/r_null.png",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 15, 
@@ -573,7 +573,7 @@ const REALM_CARDS = {
                         text: "+2☘️ +1🪙"
                     },
                     failure: { 
-                        threshold: 7, 
+                        threshold: 12, 
                         effects: [
                             { type: "health", value: -2, text: "-2❤️" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -592,12 +592,12 @@ const REALM_CARDS = {
             },
             {
                 id: 4,
-                title: "4 The Coffee Ghost",
-                illustration: "images/coffee-ghost.png",
+                title: "r3_4",
+                illustration: "images/r_null.png",
                 text: "A translucent figure appears, requesting their 'usual'. What was their usual again?",
                 conditions: {
                     success: { 
-                        threshold: 12, 
+                        threshold: 13, 
                         effects: [
                             { type: "gold", value: 1, text: "+1🪙" },
                             { type: "luck", value: 1, text: "+1☘️" }
@@ -605,7 +605,7 @@ const REALM_CARDS = {
                         text: "+1🪙 +1☘️"
                     },
                     failure: { 
-                        threshold: 6, 
+                        threshold: 11, 
                         effects: [
                             { type: "luck", value: -1, text: "-1☘️" },
                             { type: "health", value: -1, text: "-1❤️" }
@@ -624,9 +624,9 @@ const REALM_CARDS = {
             },
             {
                 id: 5,
-                title: "5 The Time Traveler",
-                illustration: "images/time-traveler.png",
-                text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
+                title: "r3_5",
+                illustration: "images/r_null.png",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 16, 
@@ -637,7 +637,7 @@ const REALM_CARDS = {
                         text: "+1☘️ +1🪙"
                     },
                     failure: { 
-                        threshold: 10, 
+                        threshold: 14, 
                         effects: [
                             { type: "gold", value: -1, text: "-1🪙" },
                             { type: "health", value: -1, text: "-1❤️" }
@@ -658,9 +658,9 @@ const REALM_CARDS = {
             },
             {
                 id: 6,
-                title: "6 The Time Traveler",
-                illustration: "images/time-traveler.png",
-                text: "A customer claims they ordered their drink tomorrow. Can you make sense of this paradox?",
+                title: "r3_6",
+                illustration: "images/r_null.png",
+                text: "текст",
                 conditions: {
                     success: { 
                         threshold: 16, 
@@ -671,7 +671,7 @@ const REALM_CARDS = {
                         text: "+1☘️ +1❤️"
                     },
                     failure: { 
-                        threshold: 10, 
+                        threshold: 13, 
                         effects: [
                             { type: "gold", value: -1, text: "-1🪙" },
                             { type: "luck", value: -1, text: "-1☘️" }
@@ -693,13 +693,13 @@ const REALM_CARDS = {
         ],
         bosses: [
             {
-                id: "boss3",
+                id: "r3_boss",
                 title: "The Chocolate Titan",
-                illustration: "images/chocolate-titan.png",
+                illustration: "images/r_null.png",
                 text: "A colossal being made of molten chocolate challenges you to create the ultimate dessert drink!",
                 conditions: {
                     success: { 
-                        threshold: 24, 
+                        threshold: 21, 
                         effects: [
                             { type: "luck", value: 4, text: "+4☘️" },
                             { type: "gold", value: 3, text: "+3🪙" }
@@ -707,7 +707,7 @@ const REALM_CARDS = {
                         text: "+4☘️ +3🪙"
                     },
                     failure: { 
-                        threshold: 5, 
+                        threshold: 19, 
                         effects: [
                             { type: "health", value: -4, text: "-4❤️" },
                             { type: "luck", value: -2, text: "-2☘️" }

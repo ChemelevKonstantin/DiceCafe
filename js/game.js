@@ -20,7 +20,8 @@ class DiceCafeGame {
             canAddDie: true,
             fourthDieEnabled: false,
             isRolling: false,
-            hasRolled: false
+            hasRolled: false,
+            canConfirm: true
         };
         
         this.initializeElements();
@@ -264,12 +265,28 @@ class DiceCafeGame {
         this.popupEffects.innerHTML = effects.map(effect => `<p>${effect}</p>`).join('');
         this.resultPopup.classList.add('show');
         
-        setTimeout(() => {
+        // Disable confirm button while popup is showing
+        this.confirmButton.disabled = true;
+        
+        // Add click handler to close popup
+        const closePopup = () => {
             this.resultPopup.classList.remove('show');
-        }, 3000);
+            this.resultPopup.removeEventListener('click', closePopup);
+            // Re-enable confirm button after popup is closed
+            this.confirmButton.disabled = false;
+        };
+        
+        this.resultPopup.addEventListener('click', closePopup);
     }
     
     confirmRoll() {
+        // Prevent multiple confirmations
+        if (!this.gameState.canConfirm) return;
+        this.gameState.canConfirm = false;
+        
+        // Disable confirm button immediately
+        this.confirmButton.disabled = true;
+        
         const activeDice = this.gameState.fourthDieEnabled ? 4 : 3;
         const diceRoll = this.gameState.diceValues.slice(0, activeDice);
         const total = diceRoll.reduce((sum, val) => sum + val, 0);
@@ -316,8 +333,8 @@ class DiceCafeGame {
                 this.showResultPopup('Гра закінчена!', ['Тобі наваляли!']);
                 setTimeout(() => {
                     this.resetGame();
-                }, 3000);
-            }, 3000);
+                }, 4000);
+            }, 4000);
             return;
         }
         
@@ -327,9 +344,9 @@ class DiceCafeGame {
             
             if (nextRealm) {
                 setTimeout(() => {
-                    this.showResultPopup('Victory!', [
-                        `You defeated the ${currentQuest.title}!`,
-                        `Advancing to the ${nextRealm.replace('realm', 'Realm ')}!`
+                    this.showResultPopup('Перемога!', [
+                        `Ти переміг ${currentQuest.title}!`,
+                        `Подорож продовжується в ${nextRealm.replace('realm', 'Realm ')}!`
                     ]);
                     this.gameState.currentRealm = nextRealm;
                     this.gameState.questsCompleted = 0;
@@ -337,18 +354,22 @@ class DiceCafeGame {
                     setTimeout(() => {
                         this.drawNewQuest();
                         this.resetTurn();
-                    }, 3000);
-                }, 3000);
+                        // Re-enable confirmation after all animations are done
+                        setTimeout(() => {
+                            this.gameState.canConfirm = true;
+                        }, 2000);
+                    }, 2000);
+                }, 2000);
             } else {
                 setTimeout(() => {
-                    this.showResultPopup('Final Victory!', [
-                        `You defeated the ${currentQuest.title}!`,
-                        'You have completed all realms!'
+                    this.showResultPopup('Перемога!', [
+                        `Ти переміг ${currentQuest.title}!`,
+                        'Ти пройшов всі Світи!'
                     ]);
                     setTimeout(() => {
                         this.resetGame();
-                    }, 3000);
-                }, 3000);
+                    }, 2000);
+                }, 2000);
             }
             return;
         }
@@ -357,7 +378,11 @@ class DiceCafeGame {
         setTimeout(() => {
             this.drawNewQuest();
             this.resetTurn();
-        }, 3000);
+            // Re-enable confirmation after all animations are done
+            setTimeout(() => {
+                this.gameState.canConfirm = true;
+            }, 2000);
+        }, 2000);
     }
     
     getNextRealm(currentRealm) {
@@ -385,7 +410,8 @@ class DiceCafeGame {
             canAddDie: true,
             fourthDieEnabled: false,
             isRolling: false,
-            hasRolled: false
+            hasRolled: false,
+            canConfirm: true
         };
         
         this.drawNewQuest();
