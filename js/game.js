@@ -436,8 +436,7 @@ class DiceCafeGame {
     }
     
     resetGame() {
-        // Hide end screen if it's showing
-        this.endScreen.classList.remove('show');
+
         
         this.stats = {
             health: 2,

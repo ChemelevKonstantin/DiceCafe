@@ -699,7 +699,7 @@ const REALM_CARDS = {
                     failure: { 
                         threshold: 19, 
                         effects: [
-                            { type: "health", value: -4, text: "-4❤️" },
+                            { type: "health", value: -1, text: "-4❤️" },
                             { type: "luck", value: -2, text: "-2☘️" }
                         ],
                         text: "-4❤️ -2☘️"
