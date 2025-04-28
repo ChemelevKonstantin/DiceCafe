@@ -440,7 +440,7 @@ class DiceCafeGame {
         this.endScreen.classList.remove('show');
         
         this.stats = {
-            health: 5,
+            health: 2,
             luck: 2,
             gold: 1,
             maxValue: 5
@@ -467,7 +467,32 @@ class DiceCafeGame {
     }
 
     showEndScreen() {
+        // Disable all game controls
+        this.rollButton.disabled = true;
+        this.rerollButton.disabled = true;
+        this.addDieButton.disabled = true;
+        this.confirmButton.disabled = true;
+        this.restartButton.disabled = true;
+        
+        // Show the end screen
         this.endScreen.classList.add('show');
+        
+        // Reset game state for next playthrough
+        this.gameState = {
+            currentQuest: null,
+            questsCompleted: 0,
+            maxQuests: 4,
+            isBossFight: false,
+            currentRealm: 'Кав\'ярня ранкових метрвяків',
+            diceValues: [0, 0, 0, 0],
+            canReroll: true,
+            canAddDie: true,
+            fourthDieEnabled: false,
+            isRolling: false,
+            hasRolled: false,
+            canConfirm: true,
+            usedQuestIds: new Set()
+        };
     }
 }
 
